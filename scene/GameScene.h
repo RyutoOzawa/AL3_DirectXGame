@@ -16,10 +16,10 @@
 /// </summary>
 class GameScene {
 
-  public: // メンバ関数
-	/// <summary>
-	/// コンストクラタ
-	/// </summary>
+public: // メンバ関数
+  /// <summary>
+  /// コンストクラタ
+  /// </summary>
 	GameScene();
 
 	/// <summary>
@@ -42,7 +42,7 @@ class GameScene {
 	/// </summary>
 	void Draw();
 
-  private: // メンバ変数
+private: // メンバ変数
 	DirectXCommon* dxCommon_ = nullptr;
 	Input* input_ = nullptr;
 	Audio* audio_ = nullptr;
@@ -51,7 +51,7 @@ class GameScene {
 	/// <summary>
 	/// ゲームシーン用
 	/// </summary>
-	
+
 	//テクスチャハンドル
 	uint32_t textureHandle_ = 0;
 
@@ -59,7 +59,7 @@ class GameScene {
 	Model* model_ = nullptr;
 
 	//ワールドトランスフォーム
-	WorldTransform worldTransform_[100];
+	WorldTransform worldTransform_[4];
 	//ビュープロジェクション
 	ViewProjection viewProjection_;
 
@@ -68,13 +68,15 @@ class GameScene {
 
 	enum PartId {
 		Root,	//大元,0
-		Spine,	//脊髄,1
-		Chest,	//胸,2
-		Head,	//頭,3
-		ArmL,	//左腕,4
-		ArmR,	//右腕,5
-		Hip,	//尻,6
-		LegL,	//左足,7
-		LegR,	//右足,8
+		Head,	//頭,1
+		ArmL,	//左腕,2
+		ArmR,	//右腕,3
+		
 	};
+
+	//背景用のオブジェクト
+	WorldTransform bgObject_[4];
+	
 };
+
+
