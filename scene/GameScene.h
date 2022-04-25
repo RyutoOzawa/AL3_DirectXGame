@@ -16,10 +16,10 @@
 /// </summary>
 class GameScene {
 
-public: // メンバ関数
-  /// <summary>
-  /// コンストクラタ
-  /// </summary>
+  public: // メンバ関数
+	/// <summary>
+	/// コンストクラタ
+	/// </summary>
 	GameScene();
 
 	/// <summary>
@@ -42,7 +42,7 @@ public: // メンバ関数
 	/// </summary>
 	void Draw();
 
-private: // メンバ変数
+  private: // メンバ変数
 	DirectXCommon* dxCommon_ = nullptr;
 	Input* input_ = nullptr;
 	Audio* audio_ = nullptr;
@@ -51,18 +51,18 @@ private: // メンバ変数
 	/// <summary>
 	/// ゲームシーン用
 	/// </summary>
-
+	
 	//テクスチャハンドル
 	uint32_t textureHandle_ = 0;
 
 	//3Dモデル
 	Model* model_ = nullptr;
 
-	//カメラ上方向の角度
-	float viewAngle = 0.0f;
-
 	//ワールドトランスフォーム
 	WorldTransform worldTransform_[100];
 	//ビュープロジェクション
 	ViewProjection viewProjection_;
+
+	//カメラ上方向の角度
+	float viewAngle = 0.0f;
 };
