@@ -222,12 +222,12 @@ void GameScene::Update() {
 	worldTransform_[PartId::ArmL].UpdateMatrix();
 	worldTransform_[PartId::ArmR].UpdateMatrix();
 
-//	viewProjection_.target = { worldTransform_[PartId::Root].translation_.x,
-//		worldTransform_[PartId::Root].translation_.y ,
-//		worldTransform_[PartId::Root].translation_.z };
-//	viewProjection_.eye = { worldTransform_[PartId::Root].translation_.x - 50 * sinf(worldTransform_[PartId::Root].rotation_.y),
-//worldTransform_[PartId::Root].translation_.y +20,
-//worldTransform_[PartId::Root].translation_.z - 50  * cosf(worldTransform_[PartId::Root].rotation_.y) };
+	viewProjection_.target = { worldTransform_[PartId::Root].translation_.x,
+		worldTransform_[PartId::Root].translation_.y ,
+		worldTransform_[PartId::Root].translation_.z };
+	viewProjection_.eye = { worldTransform_[PartId::Root].translation_.x - 50 * sinf(worldTransform_[PartId::Root].rotation_.y),
+worldTransform_[PartId::Root].translation_.y +20,
+worldTransform_[PartId::Root].translation_.z - 50  * cosf(worldTransform_[PartId::Root].rotation_.y) };
 
 	//行列の再計算
 	viewProjection_.UpdateMatrix();
